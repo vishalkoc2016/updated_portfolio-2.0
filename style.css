@@ -379,65 +379,206 @@ input:checked + .slider:before {
     margin: 5 rem 0;
 }
 
-.skills .skill-table{
-    background-color: var(--bg-color);
-    color: black;
-    display: grid;
-} 
- 
-.skills h2{
-    color: var(--text-color);
-    margin: 4rem;   
+/* Skills Section Updated Styling */
+.skills-category {
+    margin-bottom: 4rem;
 }
 
- 
+.skills-category h3 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+}
 
-.skill-container{
+.skill-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.skill-box{
-    display: flex;
+    gap: 2rem;
     justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-    color: var(--main-color);
-    height: 200;
-    border-radius: 3rem;
-    cursor: pointer;
-    border: 5px solid transparent;
-    transition: 0.4s ease-in-out;
 }
 
-.skill-box:hover{
+.skill-box {
     background-color: var(--bg-color);
-  
-    color:  var(--main-color);  
-    transform: scale(1.03);
-}
-
-.skill-info{
-    display: flex;
-    flex-direction:row;
+    border: 2px solid var(--main-color);
+    border-radius: 2rem;
+    padding: 2rem 1rem;
     text-align: center;
+    transition: all 0.4s ease;
+    min-height: 150px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.skill-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skill-info i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.skill-info h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+/* Media Query for Skills Section */
+@media (max-width: 768px) {
+    .skill-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .skill-box {
+        min-height: 130px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .skill-info i {
+        font-size: 3.5rem;
+    }
+    
+    .skill-info h4 {
+        font-size: 1.4rem;
+    }
+    
+    .skills-category h3 {
+        font-size: 2.4rem;
+    }
+}
+ 
+/* Projects Section Styling */
+.projects {
+    background-color: var(--bg-color);
+}
+
+.projects h2 {
+    color: var(--text-color);
+    margin: 4rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.project-box {
+    background-color: var(--bg-color);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 15px var(--main-color);
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.project-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+}
+
+.project-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.project-box:hover .project-img img {
+    transform: scale(1.05);
+}
+
+.project-info {
     padding: 2rem;
 }
 
-.skill-info i{
-    font-size: 5rem;
+.project-info h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
 }
 
-.skill-info h4{
-    font-size: 2rem;
-    margin: 2rem 0;
-    font-weight: 800;
+.project-info p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.8;
 }
- 
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-tech span {
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.project-links .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+}
+
+/* Media Queries for Projects Section */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-box {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-tech {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-tech span {
+        display: inline-block;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+}
 
 .exp{
     background-color: var(--bg-color);

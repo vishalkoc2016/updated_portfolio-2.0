@@ -1,68 +1,63 @@
- 
- 
-
-
-const menuicon= document.querySelector('#menu-icon');
-const navbar= document.querySelector('.navbar');
-menuicon.onclick = () => {
-    menuicon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
- 
-
-function sendMail(){ 
-    let params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject: document.getElementById('subject').value,
-        text: document.getElementById("text").value,
-        phone: document.getElementById('phone').value,
-
+// Wait for DOM to be fully loaded before executing script
+document.addEventListener('DOMContentLoaded', function() {
+    // Menu toggle functionality
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('.navbar');
+    
+    if (menuIcon) {
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        };
     }
     
-    emailjs.send("service_mvjsqmd","template_jllr1xv", params) .then(function(response) {
-        alert("Form submitted.");
-        console.log("SUCCESS!", response.status, response.text);
-    }, function(error) {
-        console.log("FAILED...", error);
-        alert("Form submission failed. Please try again later.");
-    }); 
-}
-
-
-function clearField(){
-    document.getElementById('form1').reset();
-}
-const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
+    // Email form functionality
+    function sendMail() { 
+        let params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById('subject').value,
+            text: document.getElementById("text").value,
+            phone: document.getElementById('phone').value,
+        };
+        
+        emailjs.send("service_mvjsqmd", "template_jllr1xv", params).then(function(response) {
+            alert("Form submitted.");
+            console.log("SUCCESS!", response.status, response.text);
+        }, function(error) {
+            console.log("FAILED...", error);
+            alert("Form submission failed. Please try again later.");
+        }); 
+    }
     
-    if (checkBox.checked == true){
-         alert('theme change');
-
-      } else {
-         alert('theme change');
-      }
-})
-
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
+    // Make sendMail function globally accessible
+    window.sendMail = sendMail;
+    
+    // Theme switching functionality
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    
+    if (toggleSwitch) {
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme') || 'dark'; // Default to dark if none set
+        
+        // Apply saved theme
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        toggleSwitch.checked = (currentTheme === 'dark');
+        
+        // Theme switch function
+        function switchTheme(e) {
+            const newTheme = e.target.checked ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            console.log('Theme switched to:', newTheme); // Debug logging
+        }
+        
+        // Add event listener to theme toggle
+        toggleSwitch.addEventListener('change', switchTheme);
+        
+        // Debug logging
+        console.log('Theme toggle initialized. Current theme:', currentTheme);
+    } else {
+        console.error('Theme toggle switch not found in the DOM');
     }
-}
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    }
-    else {        document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-    }    
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
+});

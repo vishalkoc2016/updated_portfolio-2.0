@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"   >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghaverse</title>
+    <title>VishalSphere</title>
     <link rel="stylesheet" href="style.css" />
     <link
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -16,6 +16,8 @@
 <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
 
 <!-- JSDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="script.js"></script>
 <link
   href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css"
   rel="stylesheet"
@@ -30,7 +32,7 @@
     <script type="text/javascript">
     (function(){
         emailjs.init({
-            publicKey: "K1aR5usG27SgplH85",
+            publicKey: "w_S0KUjstITKSTLqT",
         });
     })();
     </script>     
@@ -48,6 +50,7 @@
             <a href="#home">Home</a> 
             <!--<a href="#about">About</a> -->
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#exp">Experience</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
@@ -64,7 +67,7 @@
     </header>
 
     <br><br><br><br><br>
-    <section  class="home" id="home">
+    <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, It's <span> Vishal</span></h1>
             <h3 class="text-anim"><p>I'm a </p><span class="typer"> </span></h3>
@@ -85,14 +88,14 @@
                 
             </div>
             <div class="btn-group">
-                <a href="https://drive.google.com/file/d/1O6krkl7lAyCEQVix8rswuaYb_9wQ_tkk/view?usp=sharing" class="btn">Resume</a>
+                <a href="https://drive.google.com/file/d/1j1y4OKav38P2crE1dzU5VC5TLT_10Cte/view?usp=sharing" class="btn">Resume</a>
                 <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
 
 
         <div class="home-img">
-            <img src="Event_Pic.jpg" alt="Vishal Kumar">
+            <img src="Traink.jpg" alt="Vishal Kumar">
         </div>
     </section>
 
@@ -120,169 +123,373 @@
 
 <section class="skills" id="skills">
     <br>
+    <h2 class="heading">Skills</h2>
 
-<h2 class="heading">Skills</h2>
-<!--
-<div class="skill-bars">
-    <div class="bar">
-         
-        <div class="skill-icon">
-            <i class='bx bxl-python' ></i>
-        </div>    
+    <div class="skills-category">
+        <h3>Programming Languages</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bxl-python'></i>
+                    <h4>Python</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-cplusplus-plain"></i>
+                    <h4>C++</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-c-plain"></i>
+                    <h4>C</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-mysql-plain"></i>
+                    <h4>SQL</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>Web/Frameworks</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-flutter-plain"></i>
+                    <h4>Flutter</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bxl-html5'></i>
+                    <h4>HTML</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bxl-css3'></i>
+                    <h4>CSS</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bxl-javascript'></i>
+                    <h4>JavaScript</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-flask-original"></i>
+                    <h4>Flask</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>Tools/Technologies</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bxl-git'></i>
+                    <h4>Git</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bxl-github'></i>
+                    <h4>GitHub</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-vscode-plain"></i>
+                    <h4>VS Code</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-firebase-plain"></i>
+                    <h4>Firebase</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>Databases</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-firebase-plain"></i>
+                    <h4>Pinecone</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-mongodb-plain"></i>
+                    <h4>ChromaDB</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>AI/ML & LLM Libraries</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-brain'></i>
+                    <h4>LangChain</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-atom'></i>
+                    <h4>scikit-learn</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class="devicon-tensorflow-original"></i>
+                    <h4>Transformers</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-network-chart'></i>
+                    <h4>CNN</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-microphone'></i>
+                    <h4>SpeechRecognition</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-bot'></i>
+                    <h4>OpenAI</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-shape-circle'></i>
+                    <h4>Gemini</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>Data Analysis</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-table'></i>
+                    <h4>Pandas</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-math'></i>
+                    <h4>NumPy</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-line-chart'></i>
+                    <h4>Matplotlib</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                    <h4>Seaborn</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>CS Fundamentals</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-data'></i>
+                    <h4>Data Structures</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-code-block'></i>
+                    <h4>Algorithms</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-desktop'></i>
+                    <h4>OS</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-server'></i>
+                    <h4>DBMS</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-cube'></i>
+                    <h4>OOP</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-network-chart'></i>
+                    <h4>Networks</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>Networking & Security</h3>
+        <div class="skill-container">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-shield-quarter'></i>
+                    <h4>CyberOps</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-wifi'></i>
+                    <h4>CCNA</h4>
+                </div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <i class='bx bx-lock-alt'></i>
+                    <h4>Cybersecurity</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Projects Section -->
+<section class="projects" id="projects">
+    <h2 class="heading">Projects</h2>
+    <div class="projects-container">
+        <div class="project-box">
+            <div class="project-img">
+                <img src="image_.png" alt="SehatSathi Project">
+            </div>
+            <div class="project-info">
+                <h3>SehatSathi </h3>
+                <p>An AI-powered medical chatbot using RAG with sentence-transformers and LangChain. Vectorized medical PDFs, stored embeddings in Pinecone, and retrieved context via LangChain. Integrated Gemini 1.5 for real-time, LLM-driven responses.</p>
+                <p>Created a lightweight, modular Flask API; deployment is currently underway.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>LLMs</span>
+                    <span>LangChain</span>
+                    <span>Pinecone</span>
+                    <span>Gemini 1.5</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">Demo</a>
+                    <a href="#" class="btn">Code</a>
+                </div>
+            </div>
+        </div>
         
-         
-        <div class="progress-line python ">
-            
-               <span></span>
+        <div class="project-box">
+            <div class="project-img">
+                <img src="image.png" alt="MediWise Project">
+            </div>
+            <div class="project-info">
+                <h3>MediWise 🩺 </h3>
+                <p>Built an SVM-based disease predictor using symptom mapping for real-time medical diagnosis. Integrated speech-based symptom input with Python's SpeechRecognition.</p>
+                <p>Developed a Flask web app with medicine, diet, and lifestyle recommendations. Created a video demo showing real-time prediction and system flow.</p>
+                <p>Used Bootstrap for responsive UI and Scikit-learn for high-accuracy model training.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>ML</span>
+                    <span>SpeechRecognition</span>
+                    <span>Scikit-learn</span>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn">Demo</a>
+                    <a href="#" class="btn">Code</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="bar">
-        <div class="skill-icon">
-            <i class='bx bxl-java'></i>
-        </div>
-        <div class="progress-line java ">
-            
-            <span></span>
-        </div>
-    </div>
-
-    <div class="bar">
-        <div class="skill-icon">
-          
-            <i class="devicon-mysql-original"></i>
-        </div>
-        <div class="progress-line sql ">
-            <span></span>
-        </div>
-    </div>
-
-    <div class="bar">
-        <div class="skill-icon">
-            <span>HTML</span>
-        </div>
-        <div class="progress-line html ">
-            <span></span>
-        </div>
-    </div>
-</div>
-
-
--->
-<div class="skill-table">
-<div class="skill-container">
-     
-   
-    <div class="skill-box">
-        <div class="skill-info">
-            <i class='bx bx-code-alt  ' ></i>
-             <span></span>
-        </div>
-    </div> 
- 
-    <div class="skill-box">
-        <div class="skill-info">
-            
-            <i class='bx bxs-data ' ></i>
-           
-        </div>
-    </div>
-
-    <div class="skill-box">
-        <div class="skill-info">
-            
-            <i class="devicon-keras-plain"></i>
-           
-        </div>
-    </div>
-
-<!--
- 
-    <div class="skill-box">
-        <div class="skill-info">
-            
-            <i class="devicon-flask-original"></i>
-           
-        </div>
-    </div>
-
-    <div class="skill-box">
-        <div class="skill-info">
-            <i class='bx bxl-java'></i>
-           
-        </div>
-    </div>
-
-
-    <div class="skill-box">
-        <div class="skill-info">
-            <i class="devicon-mysql-original"></i> 
-          
-        </div>
-    </div>
-
-    <div class="skill-box">
-        <div class="skill-info">
-            <i class="devicon-mongodb-plain"></i>  
-         </div>
-    </div>
-
-    <div class="skill-box">
-        <div class="skill-info"> 
-            <i class="devicon-javascript-plain"></i> 
-         </div>
-    </div>
-
-    <div class="skill-box">
-        <div class="skill-info">  
-            <i class="devicon-opencv-plain"></i> 
-         </div>
-    </div>
-
-    <div class="skill-box">
-        <div class="skill-info">  
-            <i class="devicon-c-plain"></i>
-         </div>
-    </div>
--->
-</div>
- 
-</div>
 </section>
 
 <section class="timeline-section" id="exp">
 <h2 class="heading">Experience</h2>
 <div class="timeline-items">
 
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025</div>
+        <div class="timeline-content">
+            <h3>Software Developer Learning Intern</h3>
+            <h4>Sarva Suvidhaean Pvt. Ltd., Remote</h4>
+            <p>
+                &#x2022; Got the offer for Software Developer Intern after successfully contributing to the development of user-facing web
+                applications using Flutter, focusing on responsive UI and seamless UX for railway logistics solutions.<br>
+                &#x2022; Designed and implemented modular, reusable components using Dart and Flutter Widgets in collaboration with the
+                frontend engineering team.<br>
+                &#x2022;  Actively participated in Agile ceremonies including sprint planning, daily stand-ups, and sprint retrospectives.<br>
+                &#x2022;   Engaged in performance tuning, bug fixing, and UI refinement to improve app responsiveness and user satisfaction.<br>
+            </p>
+        </div>
+    </div>
 
     <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-date">2024</div>
         <div class="timeline-content">
-            <h3>Software Engineering Fellow</h3>
-            <h4>Headstrarter AI, Remote</h4>
+            <h3>Remote AI Coding Expert</h3>
+            <h4>Outlier.ai, Remote</h4>
             <p>
-                &#x2022; Conduct literature review and studies on existing anti-counterfeiting technologies and methods of security tagging within the supply-chain industry.  <br>
-                &#x2022; Utilize Python to develop Proof of Concepts for a digitally fail-safe methodology for ensuring anti-counterfeiting during the supply-chain journey.<br>
-                &#x2022; Working on an OCR application for receipt data retrieval via NLP and machine learning. <br>
+                &#x2022;  Executed 125+ code review and generation tasks, adhering to quality standards and project-specific guidelines.  <br>
+                &#x2022; Delivered consistent, high-quality output across multiple AI project categories, ensuring timely delivery and
+                adaptability to evolving task briefs.<br>
+                &#x2022; Executed diverse AI training tasks across multiple domains while maintaining quality benchmarks set by Outlier’s
+                internal review system.<br>
             </p>
         </div>
         <div class="timeline-content">
-            <h3>Indigo Squad Member</h3>
-            <h4>Mood Indigo IIT Bombay, Remote</h4>
+            <h3>Software Engineering Fellow</h3>
+            <h4>Headstrarter AI, Remote</h4>
             <p>
-                &#x2022; Conduct literature review and studies on existing anti-counterfeiting technologies and methods of security tagging within the supply-chain industry.  <br>
-                &#x2022; Utilize Python to develop Proof of Concepts for a digitally fail-safe methodology for ensuring anti-counterfeiting during the supply-chain journey.<br>
-                &#x2022; Working on an OCR application for receipt data retrieval via NLP and machine learning. <br>
+                &#x2022; Built and deployed vishu.me, a personal portfolio website with mobile-first design.  <br>
+                &#x2022; Developed a Weather App using OpenWeatherMap API with live data and error handling.<br>
+                &#x2022; Working on an OCR application for receipt data retrieval via NLP and machine learning. Enhanced skills in HTML, CSS, JS, APIs, and pixel-perfect responsive UI.<br>
             </p>
         </div>
+
         <div class="timeline-content">
             <h3>Cyberops Associate Learner</h3>
             <h4>Cisco , Remote</h4>
             <p>
-                &#x2022; Conduct literature review and studies on existing anti-counterfeiting technologies and methods of security tagging within the supply-chain industry.  <br>
-                &#x2022; Utilize Python to develop Proof of Concepts for a digitally fail-safe methodology for ensuring anti-counterfeiting during the supply-chain journey.<br>
-                &#x2022; Working on an OCR application for receipt data retrieval via NLP and machine learning. <br>
+                &#x2022; Successfully completed the CyberOps Associate course verified by Cisco.  <br>
+                &#x2022; Developed problem-solving skills to detect and analyze intrusions and monitor networks.<br>
+                &#x2022; Completed up to 30 hours of 52 hands-on labs using virtual machines (Security Onion - ELK) and/or Cisco
+                Packet Tracer.<br>
             </p>
         </div>
     </div>
@@ -294,8 +501,9 @@
             <h3>Saleforce Developer</h3>
             <h4>  Saleforce, India, Remote </h4>
             <p>
-                &#x2022; Guided students in understanding JAVA concepts and clarified any existing doubts in coding.<br>
-                &#x2022; Performed lab invigilation for lab examinations. 
+                &#x2022; Gained hands-on experience in Salesforce Fundamentals, Flows, Apex, LWC, API.<br>
+                &#x2022; Earned Super Badges: Apex Specialist, Process Automation Specialist, Developer Super Set.<br>
+                &#x2022; Configured environments using VS Code and CLI; practiced debugging and testing.<br> 
             </p>
     </div>
     <div class="timeline-content">
@@ -389,8 +597,8 @@
  
         <div class="exp-box"> 
             <div class="exp-info">
-                <h3 > <span> Intermediate</span> <span style="float: right">Mar 2018 - Mar 2020</span>  </h3>
-                <h4> <span>  S.N College Khairadeo, Rohtas</span> <span style="float: right;">Bihar, Sasaram</span> </h4>
+                <h3 > <span> Intermediate in Science</span> <span style="float: right">Mar 2018 - Mar 2020</span>  </h3>
+                <h4> <span>  Sachchidanand College Khairadeo, Rohtas</span> <span style="float: right;">Bihar, Sasaram</span> </h4>
                  
             </div>
         </div>
@@ -400,20 +608,19 @@
 
 <section class="contact" id="contact">
     <h2 class="heading">Contact</h2>
-    <form name="form1">
-    <div class="input-grp">
-        <div class="input-box">
-            <input type="text" id="name"   placeholder="Full Name" required> 
-            <input type="email" placeholder="E-mail" id="email"  required>
-        
-                <input type="number" id='phone' placeholder="Phone Number">
-                <input type="subject" id="subject" placeholder="Subject" >
-        </div> 
-    </div>
+    <form id="contactForm" onsubmit="return false;">
+        <div class="input-grp">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Full Name" required> 
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="tel" id="phone" placeholder="Phone Number">
+                <input type="text" id="subject" placeholder="Subject">
+            </div> 
+        </div>
         <div class="input-grp2">
-            <textarea name="" id="text" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <br>    <button type="submit"  class="btn"  onclick="sendMail(); clearField();"   >Submit</button>
-             
+            <textarea id="text" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <br>
+            <button type="submit" class="btn" onclick="sendMail()">Submit</button>
         </div>
     </form>
 </section>
@@ -440,6 +647,9 @@
             <a href="#skills">Skills</a>
         </li>
         <li>
+            <a href="#projects">Projects</a>
+        </li>
+        <li>
             <a href="#exp">Experience</a>
         </li>
         <li>
@@ -447,7 +657,7 @@
         </li>
     </ul>
     <p class="copyright">
-        &copy; Megha Manoj | All Rights Reserved
+        &copy; Vishal Kumar | All Rights Reserved
     </p>
 </footer>
 
